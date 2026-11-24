@@ -8,20 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Nether extends World
 {
-
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
-    public Nether()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1500, 1000, 1); 
-        
-        Player babyAdventurer = new Player();
-        addObject(babyAdventurer, 0, 0);
-        
-        for (int i = 0; i < 3; i++)
+    public void createSouldyers(){
+            for (int i = 0; i < 3; i++)
 {
     int x = 400 + i * 250;
     int y = 300;
@@ -39,5 +27,19 @@ public class Nether extends World
         addObject(new Ginble(), x, y);
     }
 }
+    }
+
+    /**
+     * Constructor for objects of class MyWorld.
+     * 
+     */
+    public Nether()
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(1500, 1000, 1); 
+        
+        Player babyAdventurer = new Player();
+        addObject(babyAdventurer, 0, 0);
+        createSouldyers();
     }
 }
