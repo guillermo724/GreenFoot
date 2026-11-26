@@ -1,19 +1,16 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class Gabite here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Gabite extends Animal
 {
-    /**
-     * Act - do whatever the Gabite wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public Gabite()
+    {
+        GreenfootImage img = getImage();
+        img.scale(150, 150);
+        setImage(img);
+    }
+
     public void act()
     {
-        // Add your action code here.
+        // Aquí irá lo que haga Gabite.
     }
 }

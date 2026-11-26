@@ -1,43 +1,43 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Nether extends World
 {
-    public void createSouldyers(){
-            for (int i = 0; i < 3; i++)
-{
-    int x = 400 + i * 250;
-    int y = 300;
+    /**
+     * Crea 3 filas de Pokémon: Garchomp, Gabite y Ginble.
+     */
+    public void createSouldyers()
+    {
+        for (int fila = 0; fila < 3; fila++)
+        {
+            int y = 300 + fila * 100;   // filas en y = 300, 400 y 500
 
-    if (i % 3 == 0)
-    {
-        addObject(new Garchomp(), x, y);
-    }
-    else if (i % 3 == 1)
-    {
-        addObject(new Gabite(), x, y);
-    }
-    else
-    {
-        addObject(new Ginble(), x, y);
-    }
-}
+            for (int i = 0; i < 3; i++)
+            {
+                int x = 400 + i * 100;
+
+                if (i % 3 == 0)
+                {
+                    addObject(new Garchomp(), x, y);
+                }
+                else if (i % 3 == 1)
+                {
+                    addObject(new Gabite(), x, y);
+                }
+                else
+                {
+                    addObject(new Ginble(), x, y);
+                }
+            }
+        }
     }
 
     /**
-     * Constructor for objects of class MyWorld.
-     * 
+     * Constructor del mundo Nether.
      */
     public Nether()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1500, 1000, 1); 
-        
+    {
+        super(1000, 700, 1);
+
         Player babyAdventurer = new Player();
         addObject(babyAdventurer, 0, 0);
         createSouldyers();

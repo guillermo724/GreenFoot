@@ -1,19 +1,16 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class Ginble here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Ginble extends Animal
 {
-    /**
-     * Act - do whatever the Ginble wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public Ginble()
+    {
+        GreenfootImage img = getImage();
+        img.scale(100, 100);
+        setImage(img);
+    }
+
     public void act()
     {
-        // Add your action code here.
+        // Aquí irá lo que haga Ginble.
     }
 }
